@@ -88,6 +88,12 @@ The file named models.py will contain the Python representation of the data. The
 
 - Documenting your API
 
+- Deployement dans le Cloud 
+
+    - sur Render : https://dashboard.render.com/register
+
+- Create an SDK to make your API easier to use for Python developers.
+
 
 Updating your README.md
 
@@ -111,9 +117,13 @@ accessing data from our fantasy football website, www.sportsworldcentral.com.
 
 ## Public API 
 
-*Coming Soon*
+## Public API
 
-We'll be deploying our application soon. Check back for the public API address.
+Our API is hosted at https://fantasy-football-api.onrender.com 
+
+You can access the interactive documentation at https://fantasy-football-api.onrender.com/docs
+
+You can view the OpenAPI Specification (OAS) file at https://fantasy-football-api.onrender.com/openapi.json
 
 ## Getting Started
 
