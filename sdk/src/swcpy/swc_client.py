@@ -27,10 +27,8 @@ class SWCClient:
     LIST_TEAMS_ENDPOINT = "/v0/teams/"
     GET_COUNTS_ENDPOINT = "/v0/counts/"
 
-    BULK_FILE_BASE_URL = (
-        "https://raw.githubusercontent.com/JosueAfouda"
-        + "/api-swc/main/bulk/"
-    )
+    BULK_FILE_BASE_URL = "https://raw.githubusercontent.com/JosueAfouda/api-swc/main/bulk/"
+
 
 
 
