@@ -86,11 +86,40 @@ The file named models.py will contain the Python representation of the data. The
 
 - Create the FastAPI code to use this data and publish it as a REST API.
 
+On peut tester l'API avec ce code Python : 
+
+    - Lancer l'API : (.venv) vant@MOOVE15:~/Documents/learning/api-swc$ fastapi run main.py
+
+Test directement dans un navigateur web : http://0.0.0.0:8000/v0/players/1491
+
+    - Ouvrir un autre terminal avec un autre environnement virtuel
+
+vant@MOOVE15:~/Documents/learning/essai$ source .venv/bin/activate                  
+(.venv) vant@MOOVE15:~/Documents/learning/essai$ pip install httpx                         
+(.venv) vant@MOOVE15:~/Documents/learning/essai$ pip install pandas                           
+(.venv) vant@MOOVE15:~/Documents/learning/essai$ python3                                    
+>>> import httpx                           
+>>> rest_url = "http://0.0.0.0:8000/v0/players/1491"                       
+>>> api_response = httpx.get(rest_url)                    
+>>> type(api_response)                
+>>> rsult_json = api_response.json()                 
+>>> print(rsult_json)                
+>>> import pandas as pd                 
+>>> pd.DataFrame(rsult_json)                
+>>> exit()                   
+
+Whether you called this API from the web browser or from Python, you executed an HTTP GET verb, which is used for reading information from an API.
+
 - Documenting your API
 
 - Deployement dans le Cloud 
 
     - sur Render : https://dashboard.render.com/register
+
+    Lien de mon API : https://fantasy-football-api.onrender.com
+
+Du coup je peux effectuer le test ci-dessus avec https://fantasy-football-api.onrender.com/v0/players/1491
+
 
 - Create an SDK to make your API easier to use for Python developers.
 
